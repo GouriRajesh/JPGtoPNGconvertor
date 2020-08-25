@@ -1,5 +1,5 @@
-# The project converts JPG images to PNG images reading it from a folder and creating
-# a new folder and storing it in the same. Arguments are accepted from the commandline.
+# The project converts JPG images to PNG images reading it from a source folder and creating
+# a new destination folder and storing it in the same. Arguments are accepted from the commandline.
 # 1st argument is sourcefolder/ and 2nd one the destinationfolder/
 
 import sys
@@ -18,6 +18,3 @@ for imagefile in os.listdir(source_folder):
     clean_imgname = os.path.splitext(imagefile)[0]
     img.save(f'{destination_folder}{clean_imgname}.png', 'png')
     print('Conversion done!')
-
-# Sometimes if its says module not found then install the module via the terminal command.
-# Before using the same program again delete the newf file so that it creates a new file again.
